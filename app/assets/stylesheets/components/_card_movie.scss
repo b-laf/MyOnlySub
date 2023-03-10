@@ -125,3 +125,15 @@
     background-color: $color2;
   }
 }
+
+//JS : adding to the wishlist --> add a border, changing the button, and adding a tick
+
+.border-add-wishlist img {
+  border: 3px solid #5D16A6;
+  border-radius: 10px;
+}
+
+// .ticked-add-wishlist {
+//   color: #5D16A6;
+//   position: relative;
+// }

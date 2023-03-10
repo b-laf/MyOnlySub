@@ -12,7 +12,8 @@ export default class extends Controller {
   insert(event) {
     event.preventDefault()
     fetch(this.url1Value)
-    this.element.remove()
+    this.element.classList.add("border-add-wishlist")
+    this.element.insertAdjacentHTML("afterbegin", "<i class="fa-solid fa-circle-check ticked-add-wishlist"></i>")
     // this.element.innerHTML = "coucou" --> message pour indiquer que ajouté à la liste
   }
 
