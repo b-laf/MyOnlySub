@@ -7,15 +7,22 @@ export default class extends Controller {
   connect() {
   }
 
-  addingimage() {
-    this.platformTarget.classList.add("image")
-  }
+  growing() {
+    this.platformTarget.animate([
+      {transform: 'scale(0.4)' },
+     ], {
+      duration: 2000,
+      iteration: Infinity,
+    })
 
-  removingimage() {
-    this.platformTarget.classList.remove("image")
+    this.platformTarget.animate( [
+      {transform: 'scale(1)' },
+    ], {
+      duration: 2000,
+      iteration: Infinity,
+    })
   }
 
   display() {
-
   }
 }
