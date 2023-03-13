@@ -8,6 +8,7 @@
     "@rails/request.js": "^0.0.8",
     "bootstrap": "^5.2.3",
     "sortablejs": "^1.15.0",
+    "stimulus-content-loader": "^4.1.0",
     "stimulus-sortable": "^4.1.0",
     "typed.js": "^2.0.132",
     "webpack": "^5.75.0",
