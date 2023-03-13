@@ -146,11 +146,13 @@
 }
 
 .border-when-selected {
-  height: 295px;
-  width: 200px;
+  height: 266px;
+  width: 180px;
   position: absolute;
-  top:-4px;
-  left:6px;
+  top: -4px;
+  left: 1px;
+  border: 4px solid #5D16A6;
+  border-radius: 14px;
 
   // z-index:1;
 
