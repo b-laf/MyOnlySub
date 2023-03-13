@@ -6,7 +6,9 @@
     <% @results.each do |movie| %>
 
         <div class="card-movie-search">
+        <div data-controller="remove" data-remove-url5-value=<%= add_path(movie)%>>
           <%= render "cardmovie", movie: movie %>
+        </div>
         </div>
 
     <% end %>

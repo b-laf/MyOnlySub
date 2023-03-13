@@ -13,7 +13,6 @@ export default class extends Controller {
 
   insert(event) {
     event.preventDefault()
-    console.log(this.url1Value)
     fetch(this.url1Value)
     this.element.classList.toggle('border-add-wishlist')
     this.addlinkTarget.classList.toggle('fa-plus')

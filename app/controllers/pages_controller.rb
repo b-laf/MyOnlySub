@@ -6,8 +6,9 @@ class PagesController < ApplicationController
     else
       @results = false
       @movies = Movie.all.order("rating DESC")
-      @movies_amazon = @movies.where(platform: "Amazon Prime Video").select { |movie|
-        Bookmark.where(user:current_user).where(movie_id: movie.id) == [] }
+      @movies_amazon = @movies.where(platform: "Amazon Prime Video")
+      # .select { |movie|
+      #   Bookmark.where(user:current_user).where(movie_id: movie.id) == [] }
       @movies_netflix = @movies.where(platform: "Netflix").select { |movie|
         Bookmark.where(user:current_user).where(movie_id: movie.id) == [] }
       @movies_aptv = @movies.where(platform: "AppleTV+").select { |movie|
