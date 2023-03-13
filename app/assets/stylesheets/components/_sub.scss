@@ -16,19 +16,6 @@
     z-index:1;
   }
 
-  .imageother {
-    margin-top: 5px;
-    margin-bottom: 5px;
-    padding: 20px;
-    --glow-color: rgb(118, 203, 134);
-    --glow-color-light: rgba(203, 175, 118, 0.5);
-    --glow-spread-color: rgba(123, 149, 255, 0.781);
-    border: 0.1em solid var(--glow-color);
-    box-shadow: 0 0 1em 0.1em var(--glow-color), 0 0 2em 0.3em var(--glow-spread-color), inset 0 0 0.75em 0.1em var(--glow-color);
-    border-radius: 1.5em;
-    background-color: var(--btn-color);
-  }
-
   h4 {
     margin: 0px 0px 30px 0px;
   }

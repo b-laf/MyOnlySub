@@ -1,7 +1,7 @@
 <div class="container" data-controller="infos animation content-loader" >
 
 <div>
-  <div data-action="load@window->animation#growing"></div>
+  <div data-action="load@window->animation#animate"></div>
 </div>
 
   <div class="suggestion">
@@ -19,5 +19,51 @@
     </div>
   </div>
 
+    <div class="d-flex">
+      <div>
+        <h4>Series to watch on <%= @final_answer.capitalize %> during the month:</h4>
+        <div class="d-flex flex-row flex-wrap">
+          <% @movies_necessary.each do |movie| %>
+            <% if movie[:category] == "series" && movie[:platform] == @platform_for_filter %>
+                <%= render "cardmovie", movie: movie %>
+            <% end %>
+          <% end %>
+        </div>
+      </div>
 
+      <div>
+        <h4>Movies to watch on <%= @final_answer.capitalize %> during the month:</h4>
+        <div class="d-flex flex-row flex-wrap">
+          <% @movies_necessary.each do |movie| %>
+            <% if movie[:category] == "movie" && movie[:platform] == @platform_for_filter %>
+              <%= render "cardmovie", movie: movie %>
+            <% end %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+
+    <div class="d-flex">
+      <div>
+        <h4>Series to watch on <%= @final_answer.capitalize %> if you have even more time:</h4>
+        <div class="d-flex flex-row flex-wrap">
+          <% @movies_optional.each do |movie| %>
+            <% if movie[:category] == "series" && movie[:platform] == @platform_for_filter %>
+                <%= render "cardmovie", movie: movie %>
+            <% end %>
+          <% end %>
+        </div>
+      </div>
+
+      <div>
+        <h4>Movies to watch on <%= @final_answer.capitalize %> if you have even more time:</h4>
+          <div class="d-flex flex-row flex-wrap">
+            <% @movies_optional.each do |movie| %>
+              <% if movie[:category] == "movie" && movie[:platform] == @platform_for_filter %>
+                <%= render "cardmovie", movie: movie %>
+              <% end %>
+            <% end %>
+          </div>
+      </div>
+    </div>
 </div>
