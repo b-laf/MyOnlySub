@@ -1,0 +1,27 @@
+<% if @final_answer = "netflix" %>
+  <ul class="d-flex flex-column">
+    <li>Price of the "Essential" sub: 8,99€/month</li>
+    <li>Engagement: without engagement</li>
+    <li>Number of screen: 1</li>
+  </ul>
+<% elsif @final_answer = "amazon" %>
+  <ul class="d-flex flex-column">
+    <li>Price of the "Essential" sub: 6,99€/month</li>
+    <li>Engagement: without engagement</li>
+    <li>Welcome offer: 30 days free</li>
+    <li>Number of screen: 3</li>
+  </ul>
+<% elsif @final_answer = "disney" %>
+  <ul class="d-flex flex-column">
+    <li>Price of the "Essential" sub: 8,99€/month</li>
+    <li>Engagement: without engagement</li>
+    <li>Number of screen: 4</li>
+  </ul>
+<% elsif @final_answer = "apple" %>
+  <ul class="d-flex flex-column">
+    <li>Price of the "Essential" sub: 6,99€/month</li>
+    <li>Engagement: without engagement</li>
+    <li>Welcome offer: 7 days free</li>
+    <li>Number of screen: 1</li>
+  </ul>
+<% end %>

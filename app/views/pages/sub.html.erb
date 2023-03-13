@@ -1,18 +1,14 @@
-<div class="container-sub">
-
-  <h1 class="mt-3 mb-3">My sub</h1>
-
-  <div class="d-flex flex-row align-items-center">
-    <h4 class="me-3">We suggest you to subscribe for the next month to :</h4>
-    <%= image_tag("#{@platform_for_logo}.png", width:150, crop: :fill)%>
+<div class="container" data-controller="infos">
+  <div class="d-flex justify-content-between suggestion">
+      <div class="d-flex flex-row align-items-center">
+        <h4>Suggestion for the next month:</h4>
+        <%= image_tag("#{@platform_for_logo}.png", width:120, crop: :fill)%>
+        <i data-action="click->infos#display"></i>
+      </div>
+      <div class = "informations" data-infos-target= "i d-none">
+        <%= render "platforms", platform: @final_answer %>
+      </div>
   </div>
-
-    <p>Description of the platform : </p>
-    <ul class="d-flex flex-column">
-      <li>Price of the sub</li>
-      <li>Welcoming offer</li>
-      <li>Number of screen</li>
-    </ul>
 
     <h4>Series to watch on the platform:</h4>
     <div class="d-flex flex-row flex-wrap">
