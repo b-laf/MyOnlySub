@@ -10,6 +10,9 @@ application.register("add-button", AddButtonController)
 import AnimationController from "./animation_controller"
 application.register("animation", AnimationController)
 
+import DisplayingController from "./displaying_controller"
+application.register("displaying", DisplayingController)
+
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
 

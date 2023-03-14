@@ -13,7 +13,7 @@
       </ul>
     </div>
 
-    <div data-controller="sub-modal">
+    <div data-controller="sub-modal displaying">
       <div class="modal-opener">
         <p><i class="fa-solid fa-tv"></i>  Check the best recommended sub for you</p>
         <button class="wish-sub-btn btn-sub" data-action="click->sub-modal#display">Generate my sub</button>
@@ -29,7 +29,7 @@
           <br>
           <div id="time-modal">
             <p><i class="fa-sharp fa-solid fa-clock"></i> How many hours are you available during the following month ?</p>
-            <%= simple_form_for(@user, url: profile_update_path(@user), html: { class: "my-form", novalidate: false, data: { action:  "submit->waiting#waiting" } }) do |f| %>
+            <%= simple_form_for(@user, url: profile_update_path(@user), html: { class: "my-form", novalidate: false, data: { action:  "submit->waiting#waiting" }}) do |f| %>
               <%= f.input :availability,
               label: false,
               placeholder: "How many hours ?",
